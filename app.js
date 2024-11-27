@@ -1,14 +1,20 @@
-// Get the express package + mariadb
+// npm installs
+// dependecies: npm i ejs express mariadb dotenv
+// dev dependencies: npm i --save-dev nodemon
+// run: npx nodemon
+
+// Get the express package + mariadb + .env file
 const express = require('express');
 const mariadb = require('mariadb');
+const dotenv = require('dotenv').config();
 
 // Instantiate an express (web) app + mariadb pool
 const app = express();
 const pool = mariadb.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '123123',
-    database: 'guestbook'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 // Asynchronously wait for db connection
