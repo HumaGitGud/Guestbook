@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+
+# Environment variables
+.env
+
+# Windows system files
+Thumbs.db
+
+# Editor settings
+.vscode/
+
+# Other
+*.tmp

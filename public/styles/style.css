@@ -1,0 +1,155 @@
+html {
+    height: 100%;
+    background-image: url(/images/night-ambience.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    background-color: #ffffff47;
+    width: 30%;
+    margin: 30px auto;
+    padding: 10px 15px;
+    border-radius: 1%;
+    box-shadow: 0px 0px 22px #000000;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "fname fname lname lname jtitle jtitle"
+    "company company linkedin linkedin email email"
+    "howmeet howmeet howmeet other other other"
+    "message message message message message message"
+    "addmlist addmlist addmlist addmlist addmlist addmlist"
+    "format format format format format format"
+    "button . . . . entries";
+}
+
+div {
+    margin: 10px;
+}
+
+label, legend {
+    font-weight: 600;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    max-height: 300px;
+}
+
+input, select {
+    width: 100%;
+}
+
+#fname {
+    grid-area: fname;
+}
+
+#lname {
+    grid-area: lname;
+}
+
+#company {
+    grid-area: company;
+}
+
+#jtitle {
+    grid-area: jtitle;
+}
+
+#linkedin {
+    grid-area: linkedin;
+}
+
+#email {
+    grid-area: email;
+}
+
+#howmeet {
+    grid-area: howmeet;
+}
+
+#other {
+    grid-area: other;
+    display: none;
+}
+
+#message {
+    grid-area: message;
+}
+
+#addmlist {
+    grid-area: addmlist;
+}
+#addmlist input {
+    width: auto;
+}
+
+#format {
+    grid-area: format;
+    display: none;
+}
+#format input {
+    width: auto;
+}
+
+#button {
+    grid-area: button;
+    width: 70px;
+    height: 30px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#button:hover {
+    background-color: #006641;
+}
+
+.err {
+    display: none;
+    color: yellow;
+}
+
+#entries {
+    grid-area: entries;
+    width: 70px;
+    height: 30px;
+    background-color: #4836ea;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#entries > a {
+    text-decoration: none;
+    color: white;
+    font-size: .9em;
+    text-align: center;
+    padding-left: 5px;
+}
+#entries:hover {
+    background-color: #1504aa;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-color: #000000;
+}

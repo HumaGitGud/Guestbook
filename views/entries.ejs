@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="/images/smile.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <h1>All Guestbook Entries:</h1>
+        <% if (data.length != 0) { %>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>How You Met</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td><%= data[i].firstName %></td>
+                            <td><%= data[i].lastName %></td>
+                            <td><%= data[i].email %></td>
+                            <td><%= data[i].howmeet %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No data entered so far.</p>
+        <% } %>
+    </main>
+</body>
+
+
+</html>

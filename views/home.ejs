@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="/images/smile.png" type="image/x-icon">
+    <script src="/scripts/script.js" defer></script>
+</head>
+
+<body>
+    <main>
+    <h1>Contact Form</h1>
+        <form id="form" method="POST" action="confirm">
+            <div id="fname">
+                <label for="fnameInput">First Name</label>
+                <input type="text" id="fnameInput" name="fnameInput" value="<%= data.fnameInput %>">
+                <span id="fname-err" class="err">Field is required</span>
+            </div>
+
+            <div id="lname">
+                <label for="lnameInput">Last Name</label>
+                <input type="text" id="lnameInput" name="lnameInput" value="<%= data.lnameInput %>">
+                <span id="lname-err" class="err">Field is required</span>
+            </div>
+
+            <div id="jtitle">
+                <label>Job Title</label>
+                <input type="text" id="jtitle">
+            </div>
+
+            <div id="company">
+                <label>Company</label>
+                <input type="text" id="company">
+            </div>
+
+            <div id="linkedin">
+                <label for="linkedinInput">LinkedIn URL</label>
+                <input type="text" id="linkedinInput" name="linkedinInput">
+                <span id="linkedin-err" class="err">Please enter a correct format</span>
+            </div>
+
+            <div id="email">
+                <label for="emailInput">Email Address</label>
+                <input type="text" id="emailInput" name="emailInput">
+                <span id="email-err" class="err">Please enter a correct format</span>
+            </div>
+
+            <div id="howmeet">
+                <label for="howmeetInput">How did we meet?</label>
+                <select id="howmeetInput" name="howmeetInput"> 
+                    <option value="none">Please select</option>
+                    <option value="college">College</option>
+                    <option value="work">Work</option>
+                    <option value="public">Public</option>
+                    <option value="tfriends">Through friends</option>
+                    <option value="other">Other</option>
+                </select>
+                <span id="howmeet-err" class="err">Field is required</span>
+            </div>
+
+            <div id="other">
+                <label for="otherInput">Other (please specify)</label>
+                <input type="text" id="otherInput" name="otherInput">
+            </div>
+
+            <div id="message">
+                <label for="message">Message</label>
+                <textarea rows="5" id="message"></textarea>
+            </div>
+
+
+            <div id="addmlist">
+                <label for="addmlistInput">Please add me to your mailing list
+                    <input type="checkbox" id="addmlistInput" value="yes" name="addmlistInput">
+                </label>
+            </div>
+
+            <div id="format">
+                <legend>Choose an email format:
+                    <label for="HTML">
+                        <input type="radio" id="HTML" value="HTML" name="method">
+                        HTML
+                    </label>
+                    <label for="Text">
+                        <input type="radio" id="Text" value="Text" name="method">
+                        Text
+                    </label>
+                </legend>
+                <span id="format-err" class="err">Field is required</span>
+            </div>
+
+            <div id="button">
+                <button type="submit" id="button" name="button" 
+                value="edit">Submit</button>
+            </div>
+
+            <div id="entries">
+                <a href="/entries">Guest list</a> <!--referring the /entries route, not entries.ejs file-->
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

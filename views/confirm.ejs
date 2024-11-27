@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="/styles/success-style.css">
+    <link rel="shortcut icon" href="/images/smile.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <h1>Thank you for registration!</h1>
+        <p>First name: <%= data.fnameInput %></p>
+        <p>Last name: <%= data.lnameInput %></p>
+        
+        <% if (data.emailInput) { %>
+            <p>Email: <%= data.emailInput %></p>
+        <% } %>
+
+        <img src="/images/dawg.gif" width="50%">
+    </main>
+</body>
+
+</html>
